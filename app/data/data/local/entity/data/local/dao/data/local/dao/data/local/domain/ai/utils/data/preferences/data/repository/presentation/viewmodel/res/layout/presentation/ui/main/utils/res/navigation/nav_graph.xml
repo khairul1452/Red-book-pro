@@ -1,0 +1,21 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/companyListFragment">
+
+    <fragment android:id="@+id/companyListFragment"
+        android:name="com.ratebookpro.presentation.ui.companies.CompanyListFragment"
+        android:label="Companies">
+        <action android:id="@+id/action_to_items" app:destination="@id/itemListFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/itemListFragment"
+        android:name="com.ratebookpro.presentation.ui.items.ItemListFragment"
+        android:label="Items">
+        <argument android:name="companyId" app:argType="long"/>
+    </fragment>
+
+    <fragment android:id="@+id/settingsFragment"
+        android:name="com.ratebookpro.presentation.ui.settings.SettingsFragment"
+        android:label="Settings"/>
+</navigation>
